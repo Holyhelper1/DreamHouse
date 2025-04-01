@@ -40,7 +40,7 @@ h6 {
 
 h1 {
   font-family: $font-family-heavy;
-  font-size: 88px;
+  font-size:  clamp(44px, 6.11vw, 88px); // 88px/ 1440px и * 100 и получили результат 6.11vw
   text-transform: uppercase;
 }
 

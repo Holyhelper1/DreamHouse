@@ -68,3 +68,16 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1270px) {
+  .header-container {
+
+    ::before {
+      display: none !important;
+    }
+  .header-list-container {
+    display: none !important;
+  }
+}
+}

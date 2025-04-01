@@ -1,4 +1,4 @@
-// import logo from "../../assets/Icons/Logo.svg";
+import logo from "../../assets/Icons/Logo.svg";
 import Menu from "../../assets/Icons/Menu.svg";
 export const Header = () => {
   return (
@@ -9,9 +9,9 @@ export const Header = () => {
           <li className="header-list-item">About Us</li>
           <li className="header-list-item">Blog</li>
         </ul>
-        {/* <div className="header-logo-container">
+        <div className="header-logo-container">
           <img src={logo} alt="Logo" loading="lazy" />
-        </div> */}
+        </div>
         <div className="header-menu-container">
           <img src={Menu} alt="Logo" loading="lazy" />
         </div>
