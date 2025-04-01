@@ -1,0 +1,106 @@
+@use "../variables" as *;
+.bestsellers-container {
+  display: flex;
+  flex-direction: column;
+  padding: 120px;
+  background-color: $wight;
+  color: $wight;
+
+  .bestsellers-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bestsellers-cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 60px;
+    height: 310px;
+    overflow: hidden;
+    scrollbar-width: thin;
+
+    .bestsellers-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 390px;
+      z-index: 1;
+      border-radius: 8px;
+      padding: 30px;
+
+      .bestsellers-card-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        z-index: -1;
+      }
+
+      h2 {
+        background: linear-gradient(
+          107deg,
+          #fff 0%,
+          rgba(255, 255, 255, 0.7) 27.62%,
+          #fff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .bestsellers-card-price-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .bestsellers-card-price {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        h3 {
+          color: $wight;
+        }
+
+        .bestsellers-card-list {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          text-align: center;
+
+          li {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+          }
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .bestsellers-card-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

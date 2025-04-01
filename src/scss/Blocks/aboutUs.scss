@@ -1,0 +1,86 @@
+@use "../variables" as *;
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  padding: 120px;
+  background-color: $light;
+
+  .about-us-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+      width: 590px;
+    }
+  }
+
+  .about-us-advantages-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    // flex-wrap: wrap;
+    height: 216px;
+    margin-top: 60px;
+  }
+
+  .about-us-advantages-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+    width: 285px;
+    background-color: $wight;
+    border-radius: 8px;
+    padding: 30px;
+
+    .about-us-advantages-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+
+      .about-us-advantages-item-icon-container {
+        display: flex;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        align-items: center;
+        background-color: $light;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .about-us-experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 115px;
+    margin-top: 60px;
+    background-color: $wight;
+
+    .about-us-experience-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+      height: 55px;
+      padding-inline: 60px;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-right: 1px solid $light-gray;
+      }
+
+      h2 {
+        color: $light-brown;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

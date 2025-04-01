@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+@use 'reset';
+@use 'core';
+@use 'variables';
+
+@import './Blocks/header.scss';
+@import './Blocks/house-dream.scss';
+@import './Blocks/aboutUs.scss';
+@import './Blocks/bestsellers.scss';

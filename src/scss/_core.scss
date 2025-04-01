@@ -1,0 +1,142 @@
+@use "variables" as *;
+
+body {
+  font-family: $font-family-light;
+  font-size: 16px;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: $transition-duration;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: $font-family-heavy;
+  // font-weight: 900;
+  color: $dark-alternate;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-family: $font-family-heavy;
+  font-size: 88px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-family-black;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $font-family-black;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: $font-family-heavy;
+  font-size: 20px;
+  // font-weight: normal;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $dark-alternate;
+}
+
+
+.slider-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 10px;
+
+.slider-button-left {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid $light-gray;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    background: url("/src/assets/Icons/arrow-left.svg") no-repeat center;
+  }
+  &:hover {
+    border-color: $light-brown;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.slider-button-right {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid $light-gray;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    background: url("/src/assets/Icons/arrow-right.svg") no-repeat center;
+  }
+
+  &:hover {
+    border-color: $light-brown;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+}
+
+// img {
+//   display: block;
+//   max-width: 100%;
+// }

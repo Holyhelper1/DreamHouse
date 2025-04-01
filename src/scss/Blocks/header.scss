@@ -1,0 +1,70 @@
+@use "../variables" as *;
+
+.header {
+  padding-inline: 120px;
+
+  .header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    ::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $light-gray;
+    }
+
+    ::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 590px;
+      height: 100%;
+      background: url("/src/assets/Icons/Logo.svg") no-repeat center;
+      background-color: $beige;
+      // z-index: -1;
+    }
+
+    .header-list-container {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      color: $light-brown;
+
+      .header-list-item {
+        cursor: pointer;
+
+        &:hover {
+          color: $dark-brown;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+
+    .header-logo-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .header-menu-container img{
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(80%);
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
