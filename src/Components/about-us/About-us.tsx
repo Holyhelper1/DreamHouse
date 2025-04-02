@@ -73,24 +73,35 @@ export const AboutUs = () => {
       </div>
 
       <div className="about-us-experience-container">
-        <div className="about-us-experience-item">
-          <h2 className="about-us-experience-item-title">30+</h2>
-          <p>Models of<br></br>houses</p>
+        <div className="about-us-experience-adaptation">
+          <div className="about-us-experience-item">
+            <h2 className="about-us-experience-item-title">30+</h2>
+            <p>
+              Models of<br></br>houses
+            </p>
+          </div>
+          <div className="about-us-experience-item">
+            <h2 className="about-us-experience-item-title">10+</h2>
+            <p>
+              Years of<br></br>experience
+            </p>
+          </div>
         </div>
-        <div className="about-us-experience-item">
-          <h2 className="about-us-experience-item-title">10+</h2>
-          <p>Years of<br></br>experience</p>
-        </div>
-        <div className="about-us-experience-item">
-          <h2 className="about-us-experience-item-title">100+</h2>
-          <p>Satisfied <br></br> customers</p>
-        </div>
-        <div className="about-us-experience-item">
-          <h2 className="about-us-experience-item-title">7</h2>
-          <p>Stages of quality <br></br> control</p>
-        </div>
-        
 
+        <div className="about-us-experience-adaptation">
+          <div className="about-us-experience-item">
+            <h2 className="about-us-experience-item-title">100+</h2>
+            <p>
+              Satisfied <br></br> customers
+            </p>
+          </div>
+          <div className="about-us-experience-item">
+            <h2 className="about-us-experience-item-title">7</h2>
+            <p>
+              Stages of quality <br></br> control
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

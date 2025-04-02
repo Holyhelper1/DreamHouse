@@ -18,11 +18,10 @@ export const HouseDream = () => {
           in mind
         </p>
         <div className="house-dream-socials">
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={xCom} alt="x-com" />
-            <img src={pinterest} alt="pinterest" />
-    
+          <img src={facebook} alt="facebook" />
+          <img src={instagram} alt="instagram" />
+          <img src={xCom} alt="x-com" />
+          <img src={pinterest} alt="pinterest" />
         </div>
       </div>
       <div className="house-dream-image-container">
@@ -35,30 +34,33 @@ export const HouseDream = () => {
           <button className="slider-button-right"></button>
         </div>
         <div className="house-dream-info-block">
-            <div>
-
-          <h4>Dream House</h4>
-          <p>Model house with large panoramic window and fireplace</p>
-            </div>
+          <div>
+            <h4>Dream House</h4>
+            <p>Model house with large panoramic window and fireplace</p>
+          </div>
 
           <table className="house-dream-info-table">
-            <tr className="house-dream-info-table-row">
-              <td>Materials:</td>
-              <td>Aerated concrete</td>
-            </tr>
-            <tr className="house-dream-info-table-row">
-              <td>Square:</td>
-              <td>134m2</td>
-            </tr>
-            <tr className="house-dream-info-table-row">
-              <td>Price:</td>
-              <td>$120 000</td>
-            </tr>
+            <tbody>
+              <tr className="house-dream-info-table-row">
+                <td>Materials:</td>
+                <td>Aerated concrete</td>
+              </tr>
+              <tr className="house-dream-info-table-row">
+                <td>Square:</td>
+                <td>134m2</td>
+              </tr>
+              <tr className="house-dream-info-table-row">
+                <td>Price:</td>
+                <td>$120 000</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div className="house-dream-view-more">
-            <a href="#">View More</a>
-            <button><img src={buttonLarge} alt="" /></button>
+          <a href="#">View More</a>
+          <button>
+            <img src={buttonLarge} alt="" />
+          </button>
         </div>
       </div>
     </div>

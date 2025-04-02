@@ -13,7 +13,7 @@ export const Bestsellers = () => {
     <div className="bestsellers-container">
       <div className="bestsellers-title-container">
         <h2 className="bestsellers-title">Bestsellers</h2>
-        <div className="slider-button-container">
+        <div className="slider-button-container hide">
           <button className="slider-button-left"></button>
           <button className="slider-button-right"></button>
         </div>
@@ -56,7 +56,7 @@ export const Bestsellers = () => {
               </ul>
             </div>
             <button className="bestsellers-card-button">
-              <img src={buttonGrey} alt="button" width={100} height={100} />
+              <img  src={buttonGrey} alt="button" width={100} height={100} />
             </button>
           </div>
         </div>

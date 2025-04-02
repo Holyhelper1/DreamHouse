@@ -58,7 +58,7 @@
       height: 100%;
     }
 
-    .header-menu-container img{
+    .header-menu-container img {
       cursor: pointer;
 
       &:hover {
@@ -69,15 +69,26 @@
   }
 }
 
-
 @media screen and (max-width: 1270px) {
-  .header-container {
+  .header {
+    padding-inline: 60px;
 
-    ::before {
-      display: none !important;
+    .header-container {
+      ::before {
+        display: none !important;
+      }
+      .header-list-container {
+        display: none !important;
+      }
     }
-  .header-list-container {
-    display: none !important;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-inline: 20px;
+
+  }
+
 }

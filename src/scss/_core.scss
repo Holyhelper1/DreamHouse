@@ -46,25 +46,24 @@ h1 {
 
 h2 {
   font-family: $font-family-black;
-  font-size: 46px;
+  font-size: clamp(24px, 3.20vw, 46px);
   text-transform: uppercase;
 }
 
 h3 {
   font-family: $font-family-black;
-  font-size: 28px;
+  font-size: clamp(20px, 1.94vw, 28px);
   text-transform: uppercase;
 }
 
 h4 {
   font-family: $font-family-heavy;
   font-size: 20px;
-  // font-weight: normal;
 }
 
 p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: clamp(14px, 1.11vw, 16px);
   line-height: 140%;
   letter-spacing: 0.02em;
   color: $dark-alternate;
@@ -140,3 +139,13 @@ p {
 //   display: block;
 //   max-width: 100%;
 // }
+
+
+@media screen and (max-width: 1400px) {
+  .slider-button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
