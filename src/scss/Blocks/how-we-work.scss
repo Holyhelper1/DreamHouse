@@ -1,0 +1,258 @@
+@use "../variables" as *;
+
+.how-we-work-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+
+  .how-we-work-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 120px;
+    gap: 20px;
+
+    .how-we-work-title-container {
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+    }
+
+    .how-we-work-list-container {
+      display: flex;
+      flex-direction: column;
+      // gap: 5px;
+      width: 590px;
+
+      .how-we-work-list-item-counter {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+
+        span {
+          width: 48px;
+          height: 48px;
+          background-color: $wight;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 700;
+          font-size: 24px;
+          margin-top: 25px;
+          h4 {
+            color: $light-brown;
+          }
+        }
+      }
+      li p {
+        margin-left: 70px;
+      }
+    }
+  }
+  //   .how-we-work-bottom {
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: space-around;
+  //     height: 190px;
+  //     background-color: $dark-alternate;
+  //     overflow: visible !important;
+
+  //     .how-we-work-img-container {
+  //         position: relative;
+  //         background-color: $light-brown;
+  //         width: 762px;
+  //         clip-path: polygon(0 0, 73% 0, 100% 100%, 28% 100%) ; //margin-box - убирает отступы внутри картинки
+  //         // z-index: -1 !important;
+  //         overflow: visible !important;
+
+  //         &::before {
+  //           content: "";
+  //           position: absolute;
+  //           top: 0;
+  //           left: 0;
+  //           width: 80%;
+  //           height: 100%;
+  //           background: url("/src/assets/how-we-work/Bottom-house.png") no-repeat
+  //             center;
+  //           background-size: cover;
+  //           z-index: 2 !important;
+  //         }
+  //     }
+  //   }
+
+  // .how-we-work-bottom {
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: space-around;
+  //     height: 190px;
+  //     background-color: $dark-alternate;
+
+  //     .how-we-work-img-container {
+  //       position: relative;
+  //       background-color: $light-brown;
+  //       width: 762px;
+  //       clip-path: polygon(0 0, 73% 0, 100% 100%, 28% 100%);
+  //       overflow: visible ; // добавлено для разрешения выхода за границы
+
+  //       &::before {
+  //         content: "";
+  //         position: absolute;
+  //         top: 0;
+  //         left: 0;
+  //         width: 80%;
+  //         height: 100%;
+  //         background: url("/src/assets/how-we-work/Bottom-house.png") no-repeat center;
+  //         background-size: cover;
+  //         z-index: 2 !important;
+  //       }
+  //     }
+  //   }
+
+  .how-we-work-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 190px;
+    background-color: $dark-alternate;
+
+    .how-we-work-bottom-house-img {
+      position: absolute;
+      left: 7%;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .how-we-work-img-container {
+      position: relative;
+      background-color: $light-brown;
+      width: 562px;
+      height: 100%;
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+    }
+
+    .how-we-work-info-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      //   width:  590px;
+      gap: 140px;
+    }
+
+    .how-we-work-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      h3 {
+        background: linear-gradient(
+          107deg,
+          #fff 0%,
+          rgba(255, 255, 255, 0.582) 27.62%,
+          #fff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        // color: $dark-gray;
+        color: $wight;
+      }
+      //   padding: 20px;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+// .how-we-work-bottom {
+//     border: 1px solid red; // для проверки
+//     .how-we-work-img-container {
+//         border: 1px solid blue; // для проверки
+//           }
+//         }
+
+@media screen and (max-width: 1400px) {
+  .how-we-work-content-container {
+    padding: 60px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .how-we-work-bottom {
+    flex-direction: column !important;
+    height: 310px !important;
+    // align-items: center;
+    gap: 40px !important;
+
+    .how-we-work-bottom-house-img {
+      top: -10%;
+    }
+
+    .how-we-work-img-container {
+      // width: 80% !important;
+      //   padding-bottom: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .how-we-work-content-container {
+    flex-direction: column !important;
+    // flex-direction: column-reverse !important;
+    align-items: center !important;
+    padding: 30px !important;
+
+    .how-we-work-title-container {
+      width: 100%;
+
+      .how-we-work-video-container {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .how-we-work-list-container {
+    width: 100% !important;
+  }
+  .how-we-work-bottom {
+    padding-inline: 20px;
+    padding-bottom: 30px;
+    align-items: center !important;
+    height: 270px !important;
+
+    .how-we-work-img-container {
+      width: 80% !important;
+    }
+    .how-we-work-bottom-house-img {
+      position: unset;
+      width: 100%;
+      left: -5% !important;
+    }
+
+    .how-we-work-info-container {
+      gap: 2px !important;
+    }
+  }
+}
