@@ -11,6 +11,7 @@ input,
 textarea,
 svg * {
   transition-duration: $transition-duration;
+  font-family: $font-family-light;
 }
 
 .visually-hidden {
@@ -40,13 +41,17 @@ h6 {
 
 h1 {
   font-family: $font-family-heavy;
-  font-size:  clamp(44px, 6.11vw, 88px); // 88px/ 1440px и * 100 и получили результат 6.11vw
+  font-size: clamp(
+    44px,
+    6.11vw,
+    88px
+  ); // 88px/ 1440px и * 100 и получили результат 6.11vw
   text-transform: uppercase;
 }
 
 h2 {
   font-family: $font-family-black;
-  font-size: clamp(24px, 3.20vw, 46px);
+  font-size: clamp(24px, 3.2vw, 46px);
   text-transform: uppercase;
 }
 
@@ -54,6 +59,7 @@ h3 {
   font-family: $font-family-black;
   font-size: clamp(20px, 1.94vw, 28px);
   text-transform: uppercase;
+  letter-spacing: 0.001em; 
 }
 
 h4 {
@@ -64,11 +70,10 @@ h4 {
 p {
   font-weight: 300;
   font-size: clamp(14px, 1.11vw, 16px);
-  line-height: 140%;
-  letter-spacing: 0.02em;
+  line-height: 138%;
+  letter-spacing: 0.021em;
   color: $dark-alternate;
 }
-
 
 .slider-button-container {
   display: flex;
@@ -76,63 +81,63 @@ p {
   justify-content: end;
   gap: 10px;
 
-.slider-button-left {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border: 1px solid $light-gray;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
+  .slider-button-left {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid $light-gray;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
 
-  &:before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 42px;
-    height: 42px;
-    background: url("/src/assets/Icons/arrow-left.svg") no-repeat center;
-  }
-  &:hover {
-    border-color: $light-brown;
-    transform: scale(1.1);
-  }
-  &:active {
-    transform: scale(0.9);
-  }
-}
-
-.slider-button-right {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border: 1px solid $light-gray;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 42px;
-    height: 42px;
-    background: url("/src/assets/Icons/arrow-right.svg") no-repeat center;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 42px;
+      background: url("/src/assets/Icons/arrow-left.svg") no-repeat center;
+    }
+    &:hover {
+      border-color: $light-brown;
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
-  &:hover {
-    border-color: $light-brown;
-    transform: scale(1.1);
-  }
+  .slider-button-right {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid $light-gray;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
 
-  &:active {
-    transform: scale(0.9);
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 42px;
+      background: url("/src/assets/Icons/arrow-right.svg") no-repeat center;
+    }
+
+    &:hover {
+      border-color: $light-brown;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
-}
 }
 
 // img {
@@ -140,6 +145,64 @@ p {
 //   max-width: 100%;
 // }
 
+.link {
+  position: relative;
+  font-family: $font-family-light;
+  text-decoration: none;
+  color: $light-brown;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 48px;
+    width: 12px;
+    height: 16px;
+    background: url("/src/assets/Icons/link-btn-small.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &:hover {
+    color: $dark-brown;
+
+    &:before {
+      transform: scale(1.1);
+      animation: flyUp 0.5s ease-in-out;
+    }
+  }
+}
+
+
+.active-button {
+  border: 1px solid $light-brown !important;
+  background-color: $beige !important;
+  color: $light-brown !important;
+  border-radius: 32px;
+  padding: 10px 24px;
+  height: 42px;
+
+  &:hover {
+    background-color: $light-brown !important;
+    color: $beige !important;
+  }
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 1400px) {
   .slider-button-container {

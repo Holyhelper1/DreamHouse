@@ -33,9 +33,7 @@ export const AboutUs = () => {
             <div className="about-us-advantages-item-icon-container">
               <img src={star} alt="star" />
             </div>
-            <h4>
-              Personalized <br></br> Approach
-            </h4>
+            <h4>High Quality</h4>
           </div>
           <p>
             We carefully consider all your preferences and needs, creating
@@ -48,7 +46,7 @@ export const AboutUs = () => {
               <img src={paper} alt="paper" />
             </div>
             <h4>
-              Personalized <br></br> Approach
+              Transparent <br></br> Terms
             </h4>
           </div>
           <p>
@@ -62,7 +60,7 @@ export const AboutUs = () => {
               <img src={users} alt="users" />
             </div>
             <h4>
-              Personalized <br></br> Approach
+              Professional <br></br> Team
             </h4>
           </div>
           <p>

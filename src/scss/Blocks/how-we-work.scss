@@ -48,68 +48,11 @@
         }
       }
       li p {
+        margin-top: -20px;
         margin-left: 70px;
       }
     }
   }
-  //   .how-we-work-bottom {
-  //     display: flex;
-  //     flex-direction: row;
-  //     justify-content: space-around;
-  //     height: 190px;
-  //     background-color: $dark-alternate;
-  //     overflow: visible !important;
-
-  //     .how-we-work-img-container {
-  //         position: relative;
-  //         background-color: $light-brown;
-  //         width: 762px;
-  //         clip-path: polygon(0 0, 73% 0, 100% 100%, 28% 100%) ; //margin-box - убирает отступы внутри картинки
-  //         // z-index: -1 !important;
-  //         overflow: visible !important;
-
-  //         &::before {
-  //           content: "";
-  //           position: absolute;
-  //           top: 0;
-  //           left: 0;
-  //           width: 80%;
-  //           height: 100%;
-  //           background: url("/src/assets/how-we-work/Bottom-house.png") no-repeat
-  //             center;
-  //           background-size: cover;
-  //           z-index: 2 !important;
-  //         }
-  //     }
-  //   }
-
-  // .how-we-work-bottom {
-  //     display: flex;
-  //     flex-direction: row;
-  //     justify-content: space-around;
-  //     height: 190px;
-  //     background-color: $dark-alternate;
-
-  //     .how-we-work-img-container {
-  //       position: relative;
-  //       background-color: $light-brown;
-  //       width: 762px;
-  //       clip-path: polygon(0 0, 73% 0, 100% 100%, 28% 100%);
-  //       overflow: visible ; // добавлено для разрешения выхода за границы
-
-  //       &::before {
-  //         content: "";
-  //         position: absolute;
-  //         top: 0;
-  //         left: 0;
-  //         width: 80%;
-  //         height: 100%;
-  //         background: url("/src/assets/how-we-work/Bottom-house.png") no-repeat center;
-  //         background-size: cover;
-  //         z-index: 2 !important;
-  //       }
-  //     }
-  //   }
 
   .how-we-work-bottom {
     position: relative;
@@ -121,7 +64,7 @@
 
     .how-we-work-bottom-house-img {
       position: absolute;
-      left: 7%;
+      left: 4%;
       bottom: 0;
       z-index: 2;
     }
@@ -129,7 +72,7 @@
     .how-we-work-img-container {
       position: relative;
       background-color: $light-brown;
-      width: 562px;
+      width: 570px;
       height: 100%;
       clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
     }
@@ -138,7 +81,6 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      //   width:  590px;
       gap: 140px;
     }
 
@@ -161,10 +103,8 @@
       }
 
       p {
-        // color: $dark-gray;
         color: $wight;
       }
-      //   padding: 20px;
     }
 
     button {
@@ -182,13 +122,6 @@
   }
 }
 
-// .how-we-work-bottom {
-//     border: 1px solid red; // для проверки
-//     .how-we-work-img-container {
-//         border: 1px solid blue; // для проверки
-//           }
-//         }
-
 @media screen and (max-width: 1400px) {
   .how-we-work-content-container {
     padding: 60px !important;
@@ -199,16 +132,10 @@
   .how-we-work-bottom {
     flex-direction: column !important;
     height: 310px !important;
-    // align-items: center;
     gap: 40px !important;
 
     .how-we-work-bottom-house-img {
       top: -10%;
-    }
-
-    .how-we-work-img-container {
-      // width: 80% !important;
-      //   padding-bottom: 150px;
     }
   }
 }
@@ -216,9 +143,8 @@
 @media screen and (max-width: 1000px) {
   .how-we-work-content-container {
     flex-direction: column !important;
-    // flex-direction: column-reverse !important;
     align-items: center !important;
-    padding: 30px !important;
+    padding-inline: 30px !important;
 
     .how-we-work-title-container {
       width: 100%;
@@ -233,6 +159,12 @@
 }
 
 @media screen and (max-width: 640px) {
+  .how-we-work-content-container{
+    padding-top: 80px !important;
+    padding-inline: 20px !important;
+    padding-bottom: 80px !important;
+  }
+
   .how-we-work-list-container {
     width: 100% !important;
   }

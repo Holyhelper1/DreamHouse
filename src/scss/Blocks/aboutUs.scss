@@ -13,6 +13,8 @@
     p {
       font-size: 20px;
       max-width: 590px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
     }
   }
 
@@ -27,7 +29,8 @@
   .about-us-advantages-items {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
     width: 285px;
     background-color: $wight;
@@ -37,8 +40,11 @@
     .about-us-advantages-item {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: flex-start;
+      width: 100%;
       gap: 16px;
+      align-items: center;
+      text-align: start;
 
       .about-us-advantages-item-icon-container {
         display: flex;

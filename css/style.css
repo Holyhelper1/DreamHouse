@@ -83,6 +83,7 @@ input,
 textarea,
 svg * {
   transition-duration: 0.2s;
+  font-family: "AvenirLTStd-Light", sans-serif;
 }
 
 .visually-hidden {
@@ -124,6 +125,7 @@ h3 {
   font-family: "AvenirLTStd-Black", sans-serif;
   font-size: clamp(20px, 1.94vw, 28px);
   text-transform: uppercase;
+  letter-spacing: 0.001em;
 }
 
 h4 {
@@ -134,8 +136,8 @@ h4 {
 p {
   font-weight: 300;
   font-size: clamp(14px, 1.11vw, 16px);
-  line-height: 140%;
-  letter-spacing: 0.02em;
+  line-height: 138%;
+  letter-spacing: 0.021em;
   color: #353a45;
 }
 
@@ -198,6 +200,59 @@ p {
   transform: scale(0.9);
 }
 
+.link {
+  position: relative;
+  font-family: "AvenirLTStd-Light", sans-serif;
+  text-decoration: none;
+  color: #a68a65;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 48px;
+  width: 12px;
+  height: 16px;
+  background: url("/src/assets/Icons/link-btn-small.svg") no-repeat center;
+  background-size: contain;
+}
+.link:hover {
+  color: #735d41;
+}
+.link:hover:before {
+  transform: scale(1.1);
+  animation: flyUp 0.5s ease-in-out;
+}
+
+.active-button {
+  border: 1px solid #a68a65 !important;
+  background-color: #f9f6f2 !important;
+  color: #a68a65 !important;
+  border-radius: 32px;
+  padding: 10px 24px;
+  height: 42px;
+}
+.active-button:hover {
+  background-color: #a68a65 !important;
+  color: #f9f6f2 !important;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (max-width: 1400px) {
   .slider-button-container {
     display: flex;
@@ -322,7 +377,7 @@ p {
   padding-inline: 120px;
   padding-top: 120px;
   padding-bottom: 100px;
-  height: 940px;
+  height: 720px;
   gap: 22px;
 }
 .house-dream-container .house-dream-title {
@@ -505,6 +560,8 @@ p {
 .about-us-container .about-us-title-container p {
   font-size: 20px;
   max-width: 590px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
 }
 .about-us-container .about-us-advantages-container {
   display: flex;
@@ -516,7 +573,8 @@ p {
 .about-us-container .about-us-advantages-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
   width: 285px;
   background-color: #fff;
@@ -526,8 +584,11 @@ p {
 .about-us-container .about-us-advantages-items .about-us-advantages-item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
   gap: 16px;
+  align-items: center;
+  text-align: start;
 }
 .about-us-container .about-us-advantages-items .about-us-advantages-item .about-us-advantages-item-icon-container {
   display: flex;
@@ -663,6 +724,8 @@ p {
   margin-top: 60px;
   overflow: hidden;
   scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
 }
 .bestsellers-container .bestsellers-cards-container .bestsellers-card {
   position: relative;
@@ -833,6 +896,7 @@ p {
   color: #a68a65;
 }
 .how-we-work-container .how-we-work-content-container .how-we-work-list-container li p {
+  margin-top: -20px;
   margin-left: 70px;
 }
 .how-we-work-container .how-we-work-bottom {
@@ -845,14 +909,14 @@ p {
 }
 .how-we-work-container .how-we-work-bottom .how-we-work-bottom-house-img {
   position: absolute;
-  left: 7%;
+  left: 4%;
   bottom: 0;
   z-index: 2;
 }
 .how-we-work-container .how-we-work-bottom .how-we-work-img-container {
   position: relative;
   background-color: #a68a65;
-  width: 562px;
+  width: 570px;
   height: 100%;
   clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
 }
@@ -907,7 +971,7 @@ p {
   .how-we-work-content-container {
     flex-direction: column !important;
     align-items: center !important;
-    padding: 30px !important;
+    padding-inline: 30px !important;
   }
   .how-we-work-content-container .how-we-work-title-container {
     width: 100%;
@@ -917,6 +981,11 @@ p {
   }
 }
 @media screen and (max-width: 640px) {
+  .how-we-work-content-container {
+    padding-top: 80px !important;
+    padding-inline: 20px !important;
+    padding-bottom: 80px !important;
+  }
   .how-we-work-list-container {
     width: 100% !important;
   }
@@ -936,6 +1005,208 @@ p {
   }
   .how-we-work-bottom .how-we-work-info-container {
     gap: 2px !important;
+  }
+}
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url("/src/Fonts/Avenir/AvenirLTStd-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url("/src/Fonts/Avenir/AvenirLTStd-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("/src/Fonts/Avenir/AvenirLTStd-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirLTStd-Light";
+  src: url("/src/Fonts/Avenir/AvenirLTStd-Light.otf") format("opentype");
+}
+.articles-and-tips-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  padding: 120px;
+}
+.articles-and-tips-container .articles-and-tips-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-filter-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-filter-icon-wrapper .filter-icon {
+  cursor: pointer;
+  display: none;
+}
+.articles-and-tips-container .articles-and-tips-title-container:not(:last-child) {
+  gap: 30px;
+}
+.articles-and-tips-container .articles-and-tips-title-container p {
+  max-width: 733px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-button-container button {
+  margin-top: -20px;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-button-container .articles-and-tips-choose-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-button-container .articles-and-tips-choose-buttons-container .articles-and-tips-choose-button {
+  border-radius: 32px;
+  padding: 10px 24px;
+  border: 1px solid #e2e9ed;
+  height: 42px;
+  color: #a6adb1;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+}
+.articles-and-tips-container .articles-and-tips-title-container .articles-and-tips-button-container .articles-and-tips-choose-buttons-container .articles-and-tips-choose-button:hover {
+  border: 1px solid #a68a65;
+  background-color: #f9f6f2;
+  color: #a68a65;
+}
+.articles-and-tips-container .articles-and-tips-cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  overflow: hidden;
+  margin-top: 40px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.articles-and-tips-container .articles-and-tips-cards-container h3 {
+  background: linear-gradient(107deg, #fff 0%, rgba(255, 255, 255, 0.7) 27.62%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 367px;
+  gap: 30px;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 387px;
+  height: 229px;
+  border-radius: 8px;
+  z-index: 1;
+  padding: 30px;
+  gap: 50px;
+  box-sizing: border-box;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-wrapper .articles-and-tips-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-wrapper .articles-and-tips-card-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-wrapper .articles-and-tips-card-info-container p {
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.articles-and-tips-container .articles-and-tips-cards-container .articles-and-tips-card .articles-and-tips-card-bottom p {
+  display: -webkit-box; /* Используйте flexbox для ограничивания строк */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация для flexbox */
+  -webkit-line-clamp: 3; /* Ограничиваем количество строк до 3 */
+  overflow: hidden; /* Скрываем переполнение */
+  text-overflow: ellipsis; /* Отображаем многоточие */
+  line-height: 1.4; /* Убедитесь, что значение высоты строки выставлено правильно для расчета высоты блока */
+  max-height: 4.2em; /* Задаем максимальную высоту на 3 строки с учетом line-height */
+  /* Важно! Подберите значение max-height в зависимости от вашего line-height */
+}
+.articles-and-tips-container .articles-and-tips-adaptive-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: none;
+  align-items: center;
+}
+.articles-and-tips-container .articles-and-tips-adaptive-button-container button {
+  margin-top: 30px;
+  width: 320px;
+}
+
+@media screen and (max-width: 1450px) {
+  .articles-and-tips-container {
+    gap: 60px;
+  }
+  .filter-icon {
+    display: flex !important;
+  }
+  .articles-and-tips-button-container {
+    display: none !important;
+  }
+  .articles-and-tips-adaptive-button-container {
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .articles-and-tips-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-inline: 60px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .articles-and-tips-container {
+    padding-inline: 20px;
+  }
+  .articles-and-tips-container .articles-and-tips-cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    scroll-snap-type: unset;
+    overflow: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  .articles-and-tips-card {
+    width: 100% !important;
+  }
+  .articles-and-tips-card .articles-and-tips-card-wrapper {
+    width: 100% !important;
   }
 }
 

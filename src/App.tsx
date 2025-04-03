@@ -1,5 +1,6 @@
-import { AboutUs } from "./Components/about-us/About-us";
-import { Bestsellers } from "./Components/bestsellers/Bestsellers";
+import { AboutUs } from "./Components/About-us/About-us";
+import { ArticlesAndTips } from "./Components/Articles-and-tips/Articles-and-tips";
+import { Bestsellers } from "./Components/Bestsellers/Bestsellers";
 import { Header } from "./Components/Header/Header";
 import { HouseDream } from "./Components/House-dream/House-dream";
 import { HowWeWork } from "./Components/How-we-work/How-we-work";
@@ -12,6 +13,7 @@ function App() {
       <AboutUs />
       <Bestsellers />
       <HowWeWork />
+      <ArticlesAndTips/>
     </>
   );
 }

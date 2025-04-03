@@ -26,8 +26,8 @@ export const HowWeWork = () => {
               <h4>Consultation</h4>
             </div>
             <p>
-              We begin by discussing your needs, preferences, and budget,
-              forming the concept of your future home.
+              We begin by discussing your needs, preferences, and budget,
+              forming the concept of your future home.
             </p>
           </li>
           <li>
@@ -38,8 +38,8 @@ export const HowWeWork = () => {
               <h4>Design</h4>
             </div>
             <p>
-              Our architects create a custom project with drawings and
-              3D visualizations. After approval, we prepare the necessary
+              Our architects create a custom project with drawings and
+              3D visualizations. After approval, we prepare the necessary
               documents and estimates.
             </p>
           </li>
@@ -51,20 +51,20 @@ export const HowWeWork = () => {
               <h4>Construction</h4>
             </div>
             <p>
-              We start construction, ensuring quality and adherence to timelines
-              at every stage. We keep you regularly informed about progress.
+              We start construction, ensuring quality and adherence to timelines
+              at every stage. We keep you regularly informed about progress.
             </p>
           </li>
           <li>
             <div className="how-we-work-list-item-counter">
               <span>
-                <h4>01</h4>
+                <h4>04</h4>
               </span>
               <h4>Project Handover</h4>
             </div>
             <p>
-              We conduct a final quality check, address any issues, and hand
-              over the keys to your new home along with all documents and
+              We conduct a final quality check, address any issues, and hand
+              over the keys to your new home along with all documents and
               warranties.
             </p>
           </li>
