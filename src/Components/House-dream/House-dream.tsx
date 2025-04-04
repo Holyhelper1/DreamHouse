@@ -12,7 +12,6 @@ export const HouseDream = () => {
           The house <br></br> of your <br></br>
           <span className="house-dream-title-span">dreams</span>
         </h1>
-        {/* <div>awd</div> */}
         <p className="house-dream-title-description">
           Discover the beauty and functionality houses designed with minimalism
           in mind
@@ -27,7 +26,6 @@ export const HouseDream = () => {
       <div className="house-dream-image-container">
         <img src={house1} alt="House" loading="lazy" />
       </div>
-      {/* <div className="house-dream-empty"></div> */}
       <div className="house-dream-info-container">
         <div className="slider-button-container">
           <button className="slider-button-left"></button>

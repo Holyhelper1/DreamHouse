@@ -1,0 +1,225 @@
+@use "../variables" as *;
+
+.FAQ-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 120px;
+  gap: 60px;
+
+  .FAQ-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .FAQ-info-list-container {
+      display: flex;
+      flex-direction: column;
+
+      .FAQ-info-list-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 652px;
+        height: 72px;
+        cursor: pointer;
+        justify-content: center;
+
+        .answer {
+          max-height: 0;
+          overflow: hidden;
+          transform: translateY(-20px);
+          transition: max-height 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .answer.open {
+          margin-top: 10px;
+          max-height: 200px;
+          transform: translateY(0);
+          color: $light-brown;
+        }
+
+        &:not(:last-child) {
+          &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            width: 32px;
+            height: 32px;
+            background: url("/src/assets/Icons/Subtract.svg") no-repeat center;
+            background-size: contain;
+            transition: transform 0.3s;
+          }
+
+          &:hover::after {
+            cursor: pointer;
+            transform: rotate(180deg);
+          }
+
+          &:active::after {
+            transform: rotate(90deg);
+          }
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $light;
+        }
+
+        a {
+          width: 103px;
+        }
+      }
+    }
+  }
+
+  .FAQ-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 488px;
+    // height: 418px;
+    border-radius: 32px;
+    padding-block: 40px;
+    padding-inline: 30px;
+    background-color: $light;
+    margin-top: 116px;
+    box-sizing: border-box;
+
+    .FAQ-form-input {
+      border: 1px solid $light-gray;
+      border-radius: 16px;
+      width: 100%;
+      height: 48px;
+      padding-inline: 20px;
+      color: $dark-alternate;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $light-brown;
+      }
+    }
+
+    textarea {
+      border: 1px solid $light-gray;
+      border-radius: 16px;
+      resize: none;
+      font-size: 16px;
+      padding-inline: 20px;
+      padding-block: 16px;
+      color: $dark-alternate;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $light-brown;
+      }
+    }
+
+    .FAQ-form-button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .FAQ-form-button-checkbox-container {
+        height: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .FAQ-form-policy {
+          font-weight: 300;
+          font-size: 12px;
+          max-width: 183px;
+          line-height: 126%;
+          letter-spacing: 0.02em;
+        }
+      }
+
+      .FAQ-form-button {
+        background-color: $beige;
+        width: 200px;
+        height: 48px;
+        font-size: 16px;
+        color: $light-brown;
+        border: 1px solid $light-brown;
+        border-radius: 32px;
+
+        &:hover {
+          background-color: $light-brown;
+          color: $wight;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1325px) {
+  .FAQ-container {
+    padding-inline: 60px;
+    gap: 30px;
+
+    .FAQ-info-list-item {
+      width: 450px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .FAQ-container {
+    flex-direction: column;
+    align-items: center;
+    padding-block: 80px;
+    padding-inline: 20px;
+    gap: 30px;
+
+    .FAQ-info-list-item {
+      width: 550px !important;
+      text-wrap: initial;
+      padding-right: 35px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .FAQ-container {
+    .FAQ-info-list-item {
+      width: 100% !important;
+    }
+
+    .FAQ-form-container {
+      width: 100%;
+
+      .FAQ-form-input {
+        margin-top: 30px;
+      }
+
+      textarea {
+        margin-top: 10px;
+      }
+
+      .FAQ-form-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .FAQ-form-button-checkbox-container {
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 30px;
+
+          .FAQ-form-policy {
+            width: 211px;
+          }
+        }
+
+        .FAQ-form-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

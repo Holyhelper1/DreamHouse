@@ -191,9 +191,32 @@
 
 @media screen and (max-width: 1400px) {
   .house-dream-container {  
-    padding-inline: 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-inline: 30px !important;
+  padding-top: 60px !important;
+  padding-bottom: 80px !important;
 
   }
+}
+
+@media screen and (max-width: 768px) {
+  .house-dream-container {
+    padding-inline: 20px !important;
+    gap: 30px !important;
+
+    .slider-button-container{
+      position: absolute;
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+      button{
+        background-color: $wight !important;
+      }
+    }
+
+    .house-dream-info-block{
+      margin-top: 40px;
+    }
+  }
+
 }

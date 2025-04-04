@@ -72,9 +72,10 @@
     .how-we-work-img-container {
       position: relative;
       background-color: $light-brown;
-      width: 570px;
+      width: 560px;
       height: 100%;
-      clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+      margin-right: -15px;
+      clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%);
     }
 
     .how-we-work-info-container {
@@ -107,18 +108,18 @@
       }
     }
 
-    button {
-      border: none;
-      background-color: transparent;
+    // button {
+    //   border: none;
+    //   background-color: transparent;
 
-      &:hover {
-        transform: scale(1.1);
-      }
+    //   &:hover {
+    //     transform: scale(1.1);
+    //   }
 
-      &:active {
-        transform: scale(0.9);
-      }
-    }
+    //   &:active {
+    //     transform: scale(0.9);
+    //   }
+    // }
   }
 }
 

@@ -56,7 +56,7 @@ export const Bestsellers = () => {
               </ul>
             </div>
             <button className="bestsellers-card-button">
-              <img src={buttonGrey} alt="button" width={100} height={100} />
+              <img  src={buttonGrey} alt="button" width={100} height={100} />
             </button>
           </div>
         </div>

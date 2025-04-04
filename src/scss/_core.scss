@@ -147,6 +147,9 @@ p {
 
 .link {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   font-family: $font-family-light;
   text-decoration: none;
   color: $light-brown;
@@ -160,7 +163,7 @@ p {
     content: "";
     position: absolute;
     top: 2px;
-    left: 48px;
+    right: 0;
     width: 12px;
     height: 16px;
     background: url("/src/assets/Icons/link-btn-small.svg") no-repeat center;
@@ -177,6 +180,18 @@ p {
   }
 }
 
+button {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
 
 .active-button {
   border: 1px solid $light-brown !important;
@@ -190,6 +205,22 @@ p {
     background-color: $light-brown !important;
     color: $beige !important;
   }
+}
+
+.checkbox{
+   display: flex;
+   flex-direction: row;
+   width: 24px;
+   height: 24px;
+   font-family: $font-family-light;
+   text-decoration: none;
+  //  color: $dark-alternate;
+   border-radius: 4px;
+   cursor: pointer;
+  accent-color: $light-brown;
+
+   
+
 }
 
 @keyframes flyUp {
