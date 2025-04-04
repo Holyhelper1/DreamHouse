@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export const FAQ = () => {
@@ -37,15 +36,21 @@ export const FAQ = () => {
         <h2>FAQ</h2>
         <ul className="FAQ-info-list-container">
           {faqs.map((faq, index) => (
-            <li className="FAQ-info-list-item" key={index} onClick={() => toggleAnswer(index)}>
+            <li
+              className="FAQ-info-list-item"
+              key={index}
+              onClick={() => toggleAnswer(index)}
+            >
               <div className="question">{faq.question}</div>
-              <div className={`answer ${openIndex === index ? 'open' : ''}`}>
+              <div className={`answer ${openIndex === index ? "open" : ""}`}>
                 {faq.answer}
               </div>
             </li>
           ))}
           <li className="FAQ-info-list-item">
-            <a href="#" className="link">More FAQ</a>
+            <a href="#" className="link">
+              More FAQ
+            </a>
           </li>
         </ul>
       </div>
@@ -56,15 +61,13 @@ export const FAQ = () => {
           soon as possible
         </p>
         <input className="FAQ-form-input" type="email" placeholder="EMAIL" />
-        <textarea
-          name="description"
-          id="descriptionArea"
-          rows={4}
-        ></textarea>
+        <textarea name="description" id="descriptionArea" rows={4}></textarea>
         <div className="FAQ-form-button-container">
           <div className="FAQ-form-button-checkbox-container">
             <input className="checkbox" type="checkbox"></input>
-            <p className="FAQ-form-policy">By clicking on the button you agree to the privacy policy</p>
+            <p className="FAQ-form-policy">
+              By clicking on the button you agree to the privacy policy
+            </p>
           </div>
           <button className="FAQ-form-button">Send</button>
         </div>
